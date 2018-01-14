@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed');
 
-
+.preloaderpos{
+    margin: 0 auto;
+ }
+ .preloadText{
+     font-family: 'Oswald',sans-serif;
+     font-size: 3rem;
+     text-align: center;
+ 
+ }
 .containerInfoCsm{
     margin-top: 3vh;
     display: flex;

@@ -41,10 +41,10 @@ class CsmContainer extends Component{
     renderPreload(){
         return(
             <div className="preloaderpos">
-                <div className="textPin">
+                <div className="preloadText">
                     A obter a informacao necessaria...Aguarde
                 </div>
-                <div className="progressPos">
+                <div className="preloaderpos">
                     <CircularProgress size={80} thickness={5} />
                 </div>
             </div>
@@ -79,9 +79,7 @@ class CsmContainer extends Component{
         }
     }
     handleGoBack=value=>{
-        console.log('====================================');
-        console.log(`handleGoBack value:${value}`);
-        console.log('====================================');
+       
         switch (value) {
             case 'Clientes':
                 this.setState({isViewClientes:false});
