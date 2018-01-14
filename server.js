@@ -37,7 +37,7 @@ app.set('port', (process.env.PORT) || 5000);
 // app.locals.APP_SWITCH='';
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended: false}));
-app.use(session({secret: process.env.SESSION_HASH, resave: false, saveUninitialized: true}));
+//app.use(session({secret: process.env.SESSION_HASH, resave: false, saveUninitialized: true}));
 // let locationstatic='';
 if (process.env.NODE_ENV !== 'production') {
     /* locationstatic=path.join(__dirname, 'dist');
