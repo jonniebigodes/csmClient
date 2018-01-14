@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed');
+.votingLoginButtonPos {
+    margin-left: 9vw;
+    margin-top: 2vh;
+}
+
+.preloadContainer{
+    position: relative;
+    width: 100%;
+}
+
+.preloadTextPosition{
+   margin: 0 auto;
+}
+.preloadText{
+    font-family: 'Oswald',sans-serif;
+    font-size: 3rem;
+    text-align: center;
+
+}
+.editPollName{
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    text-align: justify;
+}
+.containerEdit{
+    display: flex;
+    justify-content: center;
+    //align-content:space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+}
+.loginTabPos{
+    margin-left: 2vw;
+}
+.ruleLoginPos{
+    width: 90%;
+}
+.textLoginPos{
+    text-align: center;
+}
