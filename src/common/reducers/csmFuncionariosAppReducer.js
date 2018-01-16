@@ -36,7 +36,8 @@ const csmFuncionariosAppReducer= (state = {
             return {
                 ...state,
                 onError:true,
-                errorMessage:action.value
+                errorMessage:action.value,
+                isSearchingFuncionarios:false
             };
         }
         case APP_ERROR_RESET:{

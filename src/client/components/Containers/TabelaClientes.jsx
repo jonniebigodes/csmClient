@@ -22,9 +22,6 @@ class TabelaClientes extends Component{
         };
     }
     onRowSelectedHandler=(selectedRows)=>{
-        console.log('====================================');
-        console.log(`Selected Row:${selectedRows}`);
-        console.log('====================================');
         const {listaClientes}= this.props;
         let i=0;
         let selectedClient={};

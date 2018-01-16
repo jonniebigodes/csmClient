@@ -35,7 +35,8 @@ const csmClientesAppReducer= (state = {
             return {
                 ...state,
                 onError:true,
-                errorMessage:action.value
+                errorMessage:action.value,
+                isSearchingClientes:false
             };
         }
         case APP_ERROR_RESET:{

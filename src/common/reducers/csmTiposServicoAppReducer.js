@@ -36,7 +36,8 @@ const csmTiposServicoAppReducer= (state = {
             return {
                 ...state,
                 onError:true,
-                errorMessage:action.value
+                errorMessage:action.value,
+                isSearchingTiposServico:false
             };
         }
         case APP_ERROR_RESET:{

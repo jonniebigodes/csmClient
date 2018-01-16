@@ -27,13 +27,13 @@ export const fetchFaturas=()=>dispatch=>{
     dispatch(requestDadosFaturas());
     csmApi.getFaturas()
     .then(result=>{
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(result,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(result,null,2)}`);
+        // console.log('====================================');
         const datanormalized= normalize(result.listaFaturas,FaturasSchema.resultadosFaturas);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
+        // console.log('====================================');
         dispatch(recieveDadosFaturas(datanormalized));
     })
     .catch(error=>{

@@ -53,7 +53,7 @@ class cmsApi{
             })
             .catch(errorgetFaturas=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgetFaturas.message);
+                console.log('There has been a problem with getFaturas fetch operation: ' + errorgetFaturas.message);
                 console.log('====================================');
                 reject(errorgetFaturas.message);
             });
@@ -79,7 +79,7 @@ class cmsApi{
             })
             .catch(errorgetrecibos=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgetrecibos.message);
+                console.log('There has been a problem with getRecibos fetch operation: ' + errorgetrecibos.message);
                 console.log('====================================');
                 reject(errorgetrecibos.message);
             });
@@ -106,7 +106,7 @@ class cmsApi{
             })
             .catch(errorgetclientes=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgetclientes.message);
+                console.log('There has been a problem with getClientes fetch operation: ' + errorgetclientes.message);
                 console.log('====================================');
                 reject(errorgetclientes.message);
             });
@@ -132,7 +132,7 @@ class cmsApi{
             })
             .catch(errorgetfuncionarios=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgetfuncionarios.message);
+                console.log('There has been a problem with getFuncionarios fetch operation: ' + errorgetfuncionarios.message);
                 console.log('====================================');
                 reject(errorgetfuncionarios.message);
             });
@@ -159,7 +159,7 @@ class cmsApi{
             })
             .catch(errorgetocorrencias=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgetocorrencias.message);
+                console.log('There has been a problem with getOcorrencias fetch operation: ' + errorgetocorrencias.message);
                 console.log('====================================');
                 reject(errorgetocorrencias.message);
             });
@@ -185,7 +185,7 @@ class cmsApi{
             })
             .catch(errorgettiposservico=>{
                 console.log('====================================');
-                console.log('There has been a problem with getAll fetch operation: ' + errorgettiposservico.message);
+                console.log('There has been a problem with getTiposServico fetch operation: ' + errorgettiposservico.message);
                 console.log('====================================');
                 reject(errorgettiposservico.message);
             });

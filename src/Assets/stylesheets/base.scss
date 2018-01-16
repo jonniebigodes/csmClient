@@ -146,12 +146,22 @@ a.linksStocks:visited, .linksStocks:hover,.linksStocks:active {
     font-family:  'Oswald',sans-serif;
     font-size: 4vh;
 }
+.infoCardText{
+    text-align:center;
+    font-family:  'Oswald',sans-serif;
+    font-size: 1.5rem;
+}
 .csmPosButton{
     float:right;
+    margin-right: 2vw;
 }
 .containerInfoCliente{
-    margin-left: 40vw;
+    margin-left: 35vw;
     margin-top:5vh;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
+}
+.preloadContainer{
+    position: relative;
+    width: 100%;
 }

@@ -25,14 +25,14 @@ export const fetchRecibos=()=>dispatch=>{
     csmApi.getRecibos()
     .then(result=>{
         //const resultado= JSON.parse(result);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(result,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(result,null,2)}`);
+        // console.log('====================================');
 
         const datanormalized=normalize(result.listaRecibos,recibosSchema.resultadosRecibos);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
+        // console.log('====================================');
         dispatch(recieveDadosRecibos(datanormalized));
     })
     .catch(error=>{

@@ -35,7 +35,8 @@ const csmOcorrenciasAppReducer= (state = {
             return {
                 ...state,
                 onError:true,
-                errorMessage:action.value
+                errorMessage:action.value,
+                isSearchingOcorrencias:false
             };
         }
         case APP_ERROR_RESET:{

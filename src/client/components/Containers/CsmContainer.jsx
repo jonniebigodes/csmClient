@@ -33,28 +33,24 @@ class CsmContainer extends Component{
         };
     }
     onResetError=()=>{
-
+        this.props.resetAppError();
     }
     /**
      * preload renderer
      */
     renderPreload(){
         return(
-            <div className="preloaderpos">
+            <div className="preloadContainer">
                 <div className="preloadText">
                     A obter a informacao necessaria...Aguarde
                 </div>
-                <div className="preloaderpos">
+                <div className="preloadText">
                     <CircularProgress size={80} thickness={5} />
                 </div>
             </div>
         );
     }
     onPanelClick=value=>{
-       
-        console.log('====================================');
-        console.log(`onPanelClick value:${value}`);
-        console.log('====================================');
         switch (value) {
             case 'Clientes':
                 this.setState({isViewClientes:true,isViewFaturas:false,isViewFuncionarios:false,isViewOcorrencias:false,isViewRecibos:false,isViewTipos:false});
@@ -172,6 +168,7 @@ class CsmContainer extends Component{
                     <h4>{errorMessageApp}</h4>
                 </Dialog>
                 <AppHeader key="header" AppTitle={"Crime Scene Magicians"}/>
+                
                 {isSearching?this.renderPreload():this.renderNormal()}
                 <AppFooter key="footer=" footertext={"linkPins"}/>
                 
@@ -195,6 +192,7 @@ CsmContainer.propTypes={
     recibos:PropTypes.object.isRequired,
     numeroRecibos:PropTypes.number.isRequired,
     tiposServico:PropTypes.object.isRequired,
-    numeroTiposServico:PropTypes.number.isRequired
+    numeroTiposServico:PropTypes.number.isRequired,
+    resetAppError:PropTypes.func.isRequired
 };
 export default CsmContainer;

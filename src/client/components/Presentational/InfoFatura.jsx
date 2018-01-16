@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import CmsButton from '../Containers/CsmButton';
 import {
     Table,
@@ -77,39 +78,47 @@ class InfoFatura extends PureComponent{
     render(){
         const {informacaoConteudoFatura}= this.props;
         return(
-            <div className="container-fluid">
+           
                 <div className="row">
                     <div className="containerInfoCliente">
-                        <div>{`Descricao Fatura`}</div>
-                        <div>{`Numero Fatura: ${informacaoConteudoFatura.numerofatura}`}</div>
-                        <div>{`Numero Cliente:${informacaoConteudoFatura.numerocliente}`}</div>
-                        <div>{`Codigo Postal: ${informacaoConteudoFatura.codigopostal}`}</div>
-                        <div>{`Cidade: ${informacaoConteudoFatura.cidade}`}</div>
-                        <div>{`Concelho: ${informacaoConteudoFatura.concelho}`}</div>
-                        <div>{`Distrito: ${informacaoConteudoFatura.distrito}`}</div>
-                        <div> {`Nome Cliente: ${informacaoConteudoFatura.nomecliente}`}</div>
-                        <div>{`Contacto Cliente: ${informacaoConteudoFatura.contacto}`}</div>
-                        <div>{`Numero Funcionario: ${informacaoConteudoFatura.numerofuncionario}`}</div>
-                        <div>{`Nome Funcionario: ${informacaoConteudoFatura.nomefuncionario}`}</div>
-                        <div>{`Valor Iva: ${informacaoConteudoFatura.iva}`}</div>
-                        <div>{`Valor Sem Iva: ${informacaoConteudoFatura.valorbruto}`}</div>
-                        <div>{`Valor Final: ${informacaoConteudoFatura.valor}`}</div>
+                       <Card style={{width:'400'}}>
+                           <CardHeader title={`informacao Fatura ${informacaoConteudoFatura.numerofatura}`}
+                            actAsExpander
+                            showExpandableButton/>
+                            <CardActions>
+                                <CmsButton key="btnInfoClienteExit"
+                                iconInfo={"goback"} 
+                                buttonText={"Retroceder"} 
+                                clickAction={this.handleGoBack} 
+                                hasHref={false} hasSvg={false}
+                                isDisabled={false}/>
+                            </CardActions>
+                            <CardText expandable>
+                                <div className="infoCardText">
+                                    <div>{`Numero Fatura: ${informacaoConteudoFatura.numerofatura}`}</div>
+                                    <div>{`Numero Cliente:${informacaoConteudoFatura.numerocliente}`}</div>
+                                    <div>{`Codigo Postal: ${informacaoConteudoFatura.codigopostal}`}</div>
+                                    <div>{`Cidade: ${informacaoConteudoFatura.cidade}`}</div>
+                                    <div>{`Concelho: ${informacaoConteudoFatura.concelho}`}</div>
+                                    <div>{`Distrito: ${informacaoConteudoFatura.distrito}`}</div>
+                                    <div> {`Nome Cliente: ${informacaoConteudoFatura.nomecliente}`}</div>
+                                    <div>{`Contacto Cliente: ${informacaoConteudoFatura.contacto}`}</div>
+                                    <div>{`Numero Funcionario: ${informacaoConteudoFatura.numerofuncionario}`}</div>
+                                    <div>{`Nome Funcionario: ${informacaoConteudoFatura.nomefuncionario}`}</div>
+                                    <div>{`Valor Iva: ${informacaoConteudoFatura.iva}`}</div>
+                                    <div>{`Valor Sem Iva: ${informacaoConteudoFatura.valorbruto}`}</div>
+                                    <div>{`Valor Final: ${informacaoConteudoFatura.valor}`}</div>
+                                </div>
+                            </CardText>
+                        </Card>
                     </div>
+                    <div className="voffset4"/>
                     <div className="row">
                         {this.renderTable()}
                     </div>
                 </div>
-                <div className="row">
-                    <div className="csmPosButton">
-                        <CmsButton key="btnInfoClienteExit"
-                            iconInfo={"goback"} 
-                            buttonText={"Retroceder"} 
-                            clickAction={this.handleGoBack} 
-                            hasHref={false} hasSvg={false}
-                            isDisabled={false}/>
-                    </div>
-                </div>
-            </div>
+               
+            
         );
     }
 }

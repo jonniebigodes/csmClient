@@ -32,15 +32,15 @@ export const fetchServicos=()=>dispatch=>{
     csmApi.getTiposServico()
     .then(result=>{
         //const resultado= JSON.parse(result);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(result,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(result,null,2)}`);
+        // console.log('====================================');
 
         const datanormalized=normalize(result.listaTipos,SchemaTiposServico.resultadosTiposServico);
 
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(datanormalized,null,2)}`);
+        // console.log('====================================');
         dispatch(recieveDadosTipoServico(datanormalized));
 
     })

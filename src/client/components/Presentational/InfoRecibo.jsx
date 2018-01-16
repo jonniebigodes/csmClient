@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+
 import CmsButton from '../Containers/CsmButton';
 import {
     Table,
@@ -78,47 +80,52 @@ class InfoRecibo extends PureComponent{
     render(){
         const {infoRecibo}= this.props;
         return(
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="containerInfoCliente">
-                        <div>{`Descricao Recibos`}</div>
-                        <div>{`Numero: ${infoRecibo.numerorecibo}`}</div>
-                        <div>{`Numero Fatura: ${infoRecibo.numerofatura}`}</div>
-                        <div>{`Numero Cliente: ${infoRecibo.numerocliente}`}</div>
-                        <div>{`Nome Cliente: ${infoRecibo.nomecliente}`}</div>
-                        <div>{`Contacto: ${infoRecibo.contacto}`}</div>
-                        <div>{`Numero Funcionario: ${infoRecibo.numerofuncionario}`}</div>
-                        <div>{`Nome Funcionario: ${infoRecibo.nomefuncionario}`}</div>
-                        <div>{`Morada:${infoRecibo.rua}`}</div>
-                        <div>{`Codigo Postal: ${infoRecibo.codigopostal}`}</div>
-                        <div>{`Cidade: ${infoRecibo.cidade}`}
-                        </div>
-                        <div>{`Concelho: ${infoRecibo.concelho}`}
-                        </div>
-                        <div>{`Distrito: ${infoRecibo.distrito}`}
-                        </div>
-                        <div>{`Valor Iva: ${infoRecibo.iva}`}
-                        </div>
-                        <div>{`Valor Sem Iva: ${infoRecibo.valorbruto}`}
-                        </div>
-                        <div>{`Valor FInal: ${infoRecibo.valor}`}</div>
-                    </div>
-                    
-                    <div className="row">
-                        {this.renderTable()}
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="csmPosButton">
+            <div className="row">
+            <div className="containerInfoCliente">
+               <Card style={{width:'400'}}>
+                   <CardHeader title={`informacao Recibo ${infoRecibo.numerorecibo}`}
+                    actAsExpander
+                    showExpandableButton/>
+                    <CardActions>
                         <CmsButton key="btnInfoClienteExit"
-                            iconInfo={"goback"} 
-                            buttonText={"Retroceder"} 
-                            clickAction={this.handleGoBack} 
-                            hasHref={false} hasSvg={false}
-                            isDisabled={false}/>
-                    </div>
-                </div>
+                        iconInfo={"goback"} 
+                        buttonText={"Retroceder"} 
+                        clickAction={this.handleGoBack} 
+                        hasHref={false} hasSvg={false}
+                        isDisabled={false}/>
+                    </CardActions>
+                    <CardText expandable>
+                        <div className="infoCardText">
+                            <div>{`Numero: ${infoRecibo.numerorecibo}`}</div>
+                            <div>{`Numero Fatura: ${infoRecibo.numerofatura}`}</div>
+                            <div>{`Numero Cliente: ${infoRecibo.numerocliente}`}</div>
+                            <div>{`Nome Cliente: ${infoRecibo.nomecliente}`}</div>
+                            <div>{`Contacto: ${infoRecibo.contacto}`}</div>
+                            <div>{`Numero Funcionario: ${infoRecibo.numerofuncionario}`}</div>
+                            <div>{`Nome Funcionario: ${infoRecibo.nomefuncionario}`}</div>
+                            <div>{`Morada:${infoRecibo.rua}`}</div>
+                            <div>{`Codigo Postal: ${infoRecibo.codigopostal}`}</div>
+                            <div>{`Cidade: ${infoRecibo.cidade}`}
+                            </div>
+                            <div>{`Concelho: ${infoRecibo.concelho}`}
+                            </div>
+                            <div>{`Distrito: ${infoRecibo.distrito}`}
+                            </div>
+                            <div>{`Valor Iva: ${infoRecibo.iva}`}
+                            </div>
+                            <div>{`Valor Sem Iva: ${infoRecibo.valorbruto}`}
+                            </div>
+                            <div>{`Valor FInal: ${infoRecibo.valor}`}</div>
+                        </div>
+                        
+                    </CardText>
+                </Card>
             </div>
+            <div className="voffset4"/>
+            <div className="row">
+                {this.renderTable()}
+            </div>
+        </div>
         );
     }
 }

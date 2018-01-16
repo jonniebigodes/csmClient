@@ -26,13 +26,13 @@ export const fetchFuncionarios=()=>dispatch=>{
     csmApi.getFuncionarios()
     .then(result=>{
         //const resultado= JSON.parse(result);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(result,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(result,null,2)}`);
+        // console.log('====================================');
         const normalizedData=normalize(result.listaFuncionarios,SchemaFuncionarios.resultadosFuncionarios);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(normalizedData,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(normalizedData,null,2)}`);
+        // console.log('====================================');
         dispatch(recieveDadosFuncionarios(normalizedData));
 
     })

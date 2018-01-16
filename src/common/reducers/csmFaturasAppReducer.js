@@ -35,7 +35,8 @@ const csmFaturasAppReducer= (state = {
             return {
                 ...state,
                 onError:true,
-                errorMessage:action.value
+                errorMessage:action.value,
+                isSearchingFaturas:false
             };
         }
         

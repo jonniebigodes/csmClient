@@ -26,14 +26,14 @@ export const fetchOcorrencias=()=>dispatch=>{
     csmApi.getOcorrencias()
     .then(result=>{
         //const resultado= JSON.parse(result);
-        console.log('====================================');
-        console.log(`data recieved:${JSON.stringify(result,null,2)}`);
-        console.log('====================================');
+        // console.log('====================================');
+        // console.log(`data recieved:${JSON.stringify(result,null,2)}`);
+        // console.log('====================================');
 
         const normalizedData= normalize(result.listaOcorrencias,SchemaOcorrencias.resultadosOcorrencias);
-         console.log('====================================');
-         console.log(`data recieved ocorrencias:${JSON.stringify(normalizedData,null,2)}`);
-        console.log('====================================');
+        //  console.log('====================================');
+        //  console.log(`data recieved ocorrencias:${JSON.stringify(normalizedData,null,2)}`);
+        // console.log('====================================');
         dispatch(recieveDadosOcorrencias(normalizedData));
     })
     .catch(error=>{
